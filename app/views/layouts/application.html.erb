@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BetmatcherIo</title>
+    <title>Betmatcher</title>
+
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Bet against your friends and random people around the world in your favorite sports events">
+  <meta property="og:title" content=" BET . MATCH . WIN ">
+  <meta property="og:type" content="article">
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +16,11 @@
   </head>
 
   <body>
+  <%= render 'shared/sidebar' %>
+  <!-- <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p> -->
+  <%= render 'shared/flashes' %>
     <%= yield %>
+
   </body>
 </html>

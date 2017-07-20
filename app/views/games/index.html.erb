@@ -1,0 +1,10 @@
+<h1>Games#index</h1>
+<p>Find me in app/views/games/index.html.erb</p>
+
+<ul class = "list-unstyled text-center">
+  <%@games.each do |game|%>
+    <li>game.date_show</li>
+    <li><%=game.local%><%=" VS "%> <%=game.visit%></li>
+  <%end%>
+</ul>
+

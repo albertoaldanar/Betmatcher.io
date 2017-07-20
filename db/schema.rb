@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170717175200) do
+ActiveRecord::Schema.define(version: 20170719173025) do
 
   create_table "countries", force: :cascade do |t|
     t.integer  "sport_id"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170717175200) do
     t.string   "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "depor"
     t.index ["sport_id"], name: "index_countries_on_sport_id"
   end
 
@@ -39,7 +40,30 @@ ActiveRecord::Schema.define(version: 20170717175200) do
     t.string   "color_v"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "depor"
     t.index ["country_id"], name: "index_games_on_country_id"
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "request_id"
+    t.string   "status"
+    t.string   "team_selected"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["request_id"], name: "index_matches_on_request_id"
+    t.index ["user_id"], name: "index_matches_on_user_id"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "game_id"
+    t.integer  "amount"
+    t.string   "team_selected"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["game_id"], name: "index_requests_on_game_id"
+    t.index ["user_id"], name: "index_requests_on_user_id"
   end
 
   create_table "sports", force: :cascade do |t|
@@ -62,6 +86,11 @@ ActiveRecord::Schema.define(version: 20170717175200) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.string   "username"
+    t.integer  "coins"
+    t.string   "country"
+    t.string   "city"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

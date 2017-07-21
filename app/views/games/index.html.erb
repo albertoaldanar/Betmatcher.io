@@ -1,10 +1,19 @@
-<h1>Games#index</h1>
-<p>Find me in app/views/games/index.html.erb</p>
 
-<ul class = "list-unstyled text-center">
+<div class = "countainer">
+  <div class ="row">
+    <div class = "col-xs-10 col-sm-offset-4 col-md-8 col-md-offset-3">
+
   <%@games.each do |game|%>
-    <li>game.date_show</li>
-    <li><%=game.local%><%=" VS "%> <%=game.visit%></li>
+    <ul class = "list-unstyled text-center">
+    <div class = "game-card">
+      <li class = "football"><img src="https://image.flaticon.com/icons/svg/140/140389.svg"></li>
+      <small><li class ="date"><%=game.date_show%></li></small>
+      <li class ="league"><%=game.depor%></li>
+      <h3 class ="teams"><%=game.local%><%=" VS "%> <%=game.visit%></h3>
+    </div>
+    </ul>
   <%end%>
-</ul>
 
+  </div>
+ </div>
+</div>

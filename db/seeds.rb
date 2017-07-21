@@ -61,5 +61,14 @@ tennis_wimbledon_wommen = Country.create!(name:"Wimbledon Women", sport:tennis, 
 #GAMES SEEDS
 
 #-------------------------------------------------------------------------------
-game_1 = Game.create!(country:soccer_en, local:"Chelsea FC", visit:"Manchester United", top:true, date_show: "Saturday 8:00pm", pct_team: 1.9, pct_tie: 2.3)
+#soccer_en
+
+
+game_1 = Game.create!(country:soccer_en, local:"Arsenal", visit:"Leicester City", top:false, date_show: "Friday 19:45pm", pct_team: 1.9, pct_tie: 2.3, depor: "Premier League")
+game_2 = Game.create!(country:soccer_en, local:"Watford", visit:"Liverpool", top:false, date_show: "Saturday 12:30pm", pct_team: 1.9, pct_tie: 2.3, depor: "Premier League")
+game_3 = Game.create!(country:soccer_en, local:"Crystal Palace", visit:"Huddersfield Town FC", top:false, date_show: "Saturday 12:30pm", pct_team: 1.9, pct_tie: 2.3, depor: "Premier League")
+
+
+
+
 

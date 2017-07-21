@@ -1,3 +1,35 @@
 // Place all the styles related to the games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.game-card{
+  position: relative;
+  background-color: #f7f7fa;
+  padding: 30px;
+  margin: 20px;
+  text-align: left;
+}
+
+.date{
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  left: 20px;
+}
+
+.league{
+  position: absolute;
+  right:20px;
+  top: 10px;
+}
+
+.football{
+  padding-bottom: 0px;
+  height: 40px;
+  width: 40px;
+}
+
+.teams{
+  right: 20px;
+  left: 20px;
+}

@@ -7,4 +7,9 @@ class GamesController < ApplicationController
 
   def show
   end
+
+
+  def top
+    @top_games = Game.where(top:true)
+  end
 end

@@ -1,13 +1,24 @@
 
-<div class = "container">
+<div class = "container ">
   <div class = "row">
-    <div class = "col-md-4">
+    <div class = "col-md-6">
+    <div class="pull-left">
       <ul class = "list-unstyled sidebar">
-        <h3><%= link_to "Betmatcher Logo", pages_home_path%></h3>
-        <h3><%=link_to "My Bets", matches_path%></h3>
+        <h3 class = "border">
+        <%= link_to pages_home_path do %>
+          <img src="https://attachment.outlook.office.net/owa/albertoaldanar@hotmail.com/service.svc/s/GetFileAttachment?id=AQMkADAwATY0MDABLWQwMAAyLWM4ZGQALTAwAi0wMAoARgAAA1f8KLAR%2BBlIo7LSGZ%2Bw8yAHACQviVWa2y5PuCWt%2BCU8H7EAAAIBDAAAAN92unImHcZNuOR8sjcx8ukAAABgiKkAAAEBEgAQADvj2ORtyahIvcDRvQuk3hs%3D&X-OWA-CANARY=bc6QUuBguUaJDtukPzXt7YBhYqfu0NQYJMHO3OpVYXHTN9XrD5_yRshRfTwNTjHVB04F54rH_jA.&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImVuaDlCSnJWUFU1aWpWMXFqWmpWLWZMMmJjbyJ9.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctNDA5NjAwLTM0ODk4NDM0MjFcIixcInB1aWRcIjpcIjE3NTkyMjIwOTQyODUwMjFcIixcIm9pZFwiOlwiMDAwNjQwMDAtZDAwMi1jOGRkLTAwMDAtMDAwMDAwMDAwMDAwXCIsXCJzY29wZVwiOlwiT3dhRG93bmxvYWRcIn0iLCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5vZmZpY2UubmV0QDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImV4cCI6MTUwMDcyMDg3MSwibmJmIjoxNTAwNzIwMjcxfQ.RknlT5nD7XUzF6mQWfIHz5ob-FCNRCX1smO2_as0JJIrpiOASyPR-RNKeDF_ZDgesVTatyB8t8CQszqI3MpYwnA-wjS8-pSg74W7xFwaY76NOYlzuzLra03k5vgqQmCEm7Gj5WWFGFknMpOhxYuMeKlIh4TO-2rPkSOhWTQLbsehu5-vjnEY9F-Vh7EBlSU-6tJk6nYKUVfve3PM5uRdiaBPz6NC8Z3S34M-X_Lm9tQSVkh048GXAod-Dgz8-ib0r-DV3D7TQVWzmz0angGc94AvG2SE1E4Ge2eYgPOB24Zubi9WayrWMtVfU4pIvO-A0gOeBGl0s4PMcT4_ftPXxQ&owa=outlook.live.com&isc=1&isImagePreview=True" class = "logo">
+          <%end%>
+        </h3>
 
-          <li><div id = "soccer"> <strong><%=@sports[0].name%></strong> </div></li>
-              <ul class = "hidden list-unstyled text-left"  id ="soccer_c">
+        <h3 class = "border logo_color"><%=link_to matches_path do%>
+        <%=current_user.email%></h3>
+        <%end%>
+
+        <h3 class = " border logo_color"><%=link_to "My Bets", matches_path%></h3>
+        <h3 class = " border logo_color"><%=link_to "Top Bets", matches_path%></h3>
+          <div class = "sports">
+          <li><div class = "s_sport" id = "soccer"> <strong><%=@sports[0].name%></strong> </div></li>
+              <ul class = "hidden list-unstyled"  id ="soccer_c">
                 <%@country_soccer.each do |country|%>
                   <li>
                     <%=link_to country_games_path(country) do%>
@@ -17,9 +28,9 @@
                 <%end%>
               </ul>
 
-          <li><div id = "baseball"> <strong><%=@sports[1].name%></strong> </div></li>
+          <li><div  class = "s_sport" id = "baseball"> <strong><%=@sports[1].name%></strong> </div></li>
 
-              <ul class = "hidden list-unstyled text-left"  id ="baseball_c">
+              <ul class = "hidden list-unstyled "  id ="baseball_c">
                 <%@country_baseball.each do |country|%>
                   <li>
                     <%=country.name%>
@@ -27,9 +38,9 @@
                 <%end%>
               </ul>
 
-          <li><div id = "basketball"> <strong><%=@sports[2].name%> </strong></div></li>
+          <li><div class = "s_sport" id = "basketball"> <strong><%=@sports[2].name%> </strong></div></li>
 
-            <ul class = "hidden list-unstyled text-left"  id ="basketball_c">
+            <ul class = "hidden list-unstyled"  id ="basketball_c">
                 <%@country_basketball.each do |country|%>
                   <li>
                     <%=country.name%>
@@ -37,9 +48,9 @@
                 <%end%>
               </ul>
 
-          <li><div id = "football"> <strong><%=@sports[3].name%> </strong></div></li>
+          <li><div class = "s_sport" id = "football"> <strong><%=@sports[3].name%> </strong></div></li>
 
-              <ul class = "hidden list-unstyled text-left"  id ="football_c">
+              <ul class = "hidden list-unstyled"  id ="football_c">
                 <%@country_football.each do |country|%>
                 <li>
                   <%=country.name%>
@@ -47,9 +58,9 @@
                 <%end%>
               </ul>
 
-          <li><div id = "tennis"> <strong><%=@sports[4].name%> </strong></div></li>
+          <li><div class = "s_sport" id = "tennis"> <strong><%=@sports[4].name%> </strong></div></li>
 
-              <ul class = "hidden list-unstyled text-left"  id ="tennis_c">
+              <ul class = "hidden list-unstyled"  id ="tennis_c">
                 <%@country_tennis.each do |country|%>
                 <li>
                   <%=country.name%>
@@ -57,16 +68,18 @@
                 <%end%>
               </ul>
 
-          <li><div id = "fight"> <strong><%=@sports[5].name%> </strong></div></li>
+          <li><div class = "s_sport" id = "fight"> <strong><%=@sports[5].name%> </strong></div></li>
 
-               <ul class = "hidden list-unstyled text-left"  id ="fight_c">
+               <ul class = "hidden list-unstyled"  id ="fight_c">
                 <%@country_fight.each do |country|%>
                 <li>
                   <%=country.name%>
                 </li>
                 <%end%>
               </ul>
+              </div>
       </ul>
+      </div>
     </div>
   </div>
 </div>

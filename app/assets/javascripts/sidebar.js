@@ -1,5 +1,6 @@
-
     $(document).ready(function(){
+
+
       $("#soccer").click(function(){
         $("#soccer_c").toggleClass("hidden");
       });
@@ -20,4 +21,5 @@
       $("#fight").click(function(){
         $("#fight_c").toggleClass("hidden");
       });
+
     });

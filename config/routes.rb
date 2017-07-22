@@ -12,7 +12,7 @@ end
 
 # resources :users
 
-resources :games, only: [:show] do
+resources :games, only: [:show, :top] do
   resources :requests, only: [:index, :new, :create, :destroy]do
   resources :matches, only: [:new, :create]
   end

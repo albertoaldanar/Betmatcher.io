@@ -4,11 +4,16 @@
 
 .game-card{
   position: relative;
-  background-color: #f7f7fa;
+  background-color: white;
   padding: 30px;
-  margin: 20px;
+  margin: 30px;
   text-align: left;
 }
+
+.container_games{
+  background-color: #e0e2e4;
+}
+
 
 .date{
   position: absolute;
@@ -21,6 +26,7 @@
   position: absolute;
   right:20px;
   top: 10px;
+  color: #35A29B;
 }
 
 .football{

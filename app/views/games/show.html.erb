@@ -1,2 +1,28 @@
-<h1>Games#show</h1>
-<p>Find me in app/views/games/show.html.erb</p>
+
+<div class = "countainer ">
+  <div class ="row">
+    <div class = "col-xs-10 col-sm-offset-4 col-md-8 col-md-offset-3">
+
+    <div class = "show_games">
+      <div>
+        <p><%=@game.pct_team%></p>
+        <h2><%=@game.local%></h2>
+      </div>
+
+      <div>
+        <p><%=@game.pct_tie%></p>
+        <h2><%=" VS "%></h2>
+      </div>
+
+      <div>
+      <p><%=@game.pct_tie%></p>
+        <h2> <%=@game.visit%></h2>
+      </div>
+        <div>
+      <h3 class ="date_show"><%=@game.date_show%></h3>
+        </div>
+  </div>
+
+  </div>
+ </div>
+</div>

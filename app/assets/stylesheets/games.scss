@@ -12,6 +12,7 @@
 
 .container_games{
   background-color: #e0e2e4;
+  font-family: "Trebuchet MS", Helvetica, sans-serif
 }
 
 
@@ -38,4 +39,26 @@
 .teams{
   right: 20px;
   left: 20px;
+}
+
+
+// game#show
+
+.show_games{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  padding: 80px;
+  text-align: center;
+  margin-top: 150px;
+  background-color: black;
+  color:white;
+}
+
+.date_show{
+  position: absolute;
+  bottom:5px;
+  right: 20px;
+  left: 20px;
+
 }

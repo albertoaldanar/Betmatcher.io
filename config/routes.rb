@@ -13,15 +13,22 @@ end
 # resources :users
 
 resources :games, only: [:show, :top] do
-  resources :requests, only: [:index, :new, :create, :destroy]do
-  resources :matches, only: [:new, :create]
+
+  member do
+    post :home
+    post :away
   end
+
+  resources :requests, only: [:index, :new, :create, :destroy]
 end
 
-resources :matches, only: [:index, :destroy]
+  resources :requests, only: :index do
+    resources :matches, only: [:new, :create]
+  end
 
+  resources :matches, only: [:index, :destroy]
 
-devise_for :users
+  devise_for :users
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

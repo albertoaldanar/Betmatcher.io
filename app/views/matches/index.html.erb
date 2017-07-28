@@ -1,2 +1,28 @@
-<h1>Matches#index</h1>
-<p>Find me in app/views/matches/index.html.erb</p>
+
+<div class = "countainer ">
+  <div class ="row">
+    <div class = "col-xs-10 col-sm-offset-4 col-md-8 col-md-offset-3">
+    <%@matches.each do |match|%>
+    <div class = "text-center">
+      <ul class = "list-unstyled list-inline">
+      <li>
+        <%=match.user.email%>
+        <br>
+        <%=match.request.team_not_selected%>
+      </li>
+      <li>VS</li>
+
+      <li>
+        <%=match.request.user.email%>
+        <br>
+        <%=match.request.team_selected%>
+      </li>
+      </ul>
+      <p><%=match.request.game.date_show%></p>
+      <o><%=match.request.amount%></o>
+      </div>
+    <%end%>
+
+    </div>
+  </div>
+</div>

@@ -6,7 +6,10 @@
     <div class = "show_games">
       <div>
         <p><%=@game.pct_team%></p>
-        <h2><%=@game.local%></h2>
+        <%= simple_form_for @game, url: home_game_path(@game), method: :post do |f| %>
+          <%= f.submit @game.local, class: "btn btn-default" %>
+        <% end %>
+
       </div>
 
       <div>
@@ -15,14 +18,20 @@
       </div>
 
       <div>
-      <p><%=@game.pct_tie%></p>
-        <h2> <%=@game.visit%></h2>
-      </div>
-        <div>
-      <h3 class ="date_show"><%=@game.date_show%></h3>
-        </div>
-  </div>
+        <p> <%=@game.pct_tie%></p>
+         <%= simple_form_for @game, url: away_game_path(@game), method: :post do |f| %>
+          <%= f.submit @game.visit, class: "btn btn-default" %>
+          <% end %>
 
+      </div>
+
+        <div>
+          <h3 class ="date_show"><%=@game.date_show%></h3>
+        </div>
+    </div>
+
+    </div>
   </div>
- </div>
 </div>
+
+

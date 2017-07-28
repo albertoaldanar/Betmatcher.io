@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170719173025) do
+ActiveRecord::Schema.define(version: 20170726090219) do
 
   create_table "countries", force: :cascade do |t|
     t.integer  "sport_id"
@@ -38,9 +38,11 @@ ActiveRecord::Schema.define(version: 20170719173025) do
     t.string   "picture"
     t.string   "color_l"
     t.string   "color_v"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "depor"
+    t.string   "team_selected"
+    t.string   "team_not_selected"
     t.index ["country_id"], name: "index_games_on_country_id"
   end
 
@@ -60,8 +62,9 @@ ActiveRecord::Schema.define(version: 20170719173025) do
     t.integer  "game_id"
     t.integer  "amount"
     t.string   "team_selected"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "team_not_selected"
     t.index ["game_id"], name: "index_requests_on_game_id"
     t.index ["user_id"], name: "index_requests_on_user_id"
   end

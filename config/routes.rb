@@ -23,6 +23,11 @@ resources :games, only: [:show, :top] do
 end
 
   resources :requests, only: :index do
+
+    member do
+      post :display
+    end
+
     resources :matches, only: [:new, :create]
   end
 

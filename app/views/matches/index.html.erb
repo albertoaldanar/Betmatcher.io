@@ -2,8 +2,10 @@
 <div class = "countainer ">
   <div class ="row">
     <div class = "col-xs-10 col-sm-offset-4 col-md-8 col-md-offset-3">
+
     <%@matches.each do |match|%>
-    <div class = "text-center">
+    <%if match.user == current_user || match.request.user == current_user%>
+    <div class = "text-center game-card">
       <ul class = "list-unstyled list-inline">
       <li>
         <%=match.user.email%>
@@ -22,7 +24,7 @@
       <o><%=match.request.amount%></o>
       </div>
     <%end%>
-
+    <%end%>
     </div>
   </div>
 </div>

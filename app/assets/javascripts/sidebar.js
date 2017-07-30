@@ -2,24 +2,24 @@
 
 
       $("#soccer").click(function(){
-        $("#soccer_c").toggleClass("hidden");
+        $("#soccer_c").slideToggle();
       });
 
       $("#baseball").click(function(){
-        $("#baseball_c").toggleClass("hidden");
+        $("#baseball_c").slideToggle();
       });
 
       $("#basketball").click(function(){
-        $("#basketball_c").toggleClass("hidden");
+        $("#basketball_c").slideToggle();
       });
       $("#football").click(function(){
-        $("#football_c").toggleClass("hidden");
+        $("#football_c").slideToggle();
       });
       $("#tennis").click(function(){
-        $("#tennis_c").toggleClass("hidden");
+        $("#tennis_c").slideToggle();
       });
       $("#fight").click(function(){
-        $("#fight_c").toggleClass("hidden");
+        $("#fight_c").slideToggle();
       });
 
     });

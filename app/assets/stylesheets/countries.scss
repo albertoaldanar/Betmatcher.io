@@ -2,52 +2,89 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.initiallyHidden{
+  display: none;
+}
+
 .sidebar{
   position: fixed;
   height: 100%;
   background-color:  black;
-  color: white;
   text-align: center;
+  color: white;
   padding-right: 20px;
   padding-left: 40px;
   overflow: scroll;
   left:0px;
+  font-family: Century Gothic, sans-serif;
 }
 
 .sidebar li{
+  padding-top: 10px;
   padding-bottom: 10px;
   color:#35A29B;
 }
+
+
+
+
+.big_link a{
+  color: white;
+}
+
+.big_link:hover a{
+  text-decoration: none;
+  color: #35A29B;
+}
+
+
 
 .sidebar ul{
   padding-bottom: 10px;
 }
 .border{
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #35A29B;
   width: 100%;
   padding-top: 10px;
   padding-bottom: 20px;
 }
 
 .sports{
-  border: 0.5px solid white;
+  border: 0.1px solid gray;
   border-radius: 5px;
-  background-color: #333333;
+  background-color: black;
+  text-align: justify;
 }
 
 .s_sport{
-  -webkit-transition: color 0.5s;
- -webkit-transition: background-color 2s ease-out;
+  color: white;
+  background-color: transparent;
+  border-radius:10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 70px;
+  padding-right: 70px;
+  -webkit-transition: color 0.5s ease-out;
+  -webkit-transition: background-color 0.5s ease-out;
+
 }
 
-.s_sport :hover{
+.s_sport:hover{
   background-color: #35A29B;
-  color: white;
   cursor:pointer;
-  border-radius:10px;
-  padding-left: 60px;
-  padding-right: 60px;
+     border-radius:10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 70px;
+  padding-right: 70px;
 
+   -webkit-transition: color 0.5s ;
+ -webkit-transition: background-color 0.5s;
+
+}
+
+.country{
+  text-align: center;
 }
 
 .logo{

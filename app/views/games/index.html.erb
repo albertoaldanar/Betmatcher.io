@@ -7,18 +7,15 @@
     <ul class = "list-unstyled text-center">
     <div class = "game-card">
       <li class = "football"><img src="https://image.flaticon.com/icons/svg/140/140389.svg"></li>
-      <li>
-        <%=link_to "Show", game_path(game)%>
-      </li>
-      <small><li class ="date"><%=game.date_show%></li></small>
-      <li class ="league"><%=game.depor%></li>
-      <li><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+
+      <small><li class ="date"><strong><%=game.date_show%></strong></li></small>
+      <li class ="league"><strong><p><%=game.depor%><%=" "%><img src="https://image.flaticon.com/icons/svg/321/321260.svg" width="20" height="20"></p> </li></strong>
+        <il class ="go"><%=link_to "PLAY!", game_path(game)%></il>
       <h3 class ="teams"><%=game.local%><%=" VS "%> <%=game.visit%></h3>
     </div>
     </ul>
   <%end%>
-
-  </div>
  </div>
+</div>
 </div>
 </div>

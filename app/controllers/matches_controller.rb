@@ -1,8 +1,7 @@
 class MatchesController < ApplicationController
   def index
-    @matches = Match.where(user: current_user)
-  end
-
+    @matches = Match.all
+end
   def new
     @match = Match.new
     @request = Request.find(params[:request_id])

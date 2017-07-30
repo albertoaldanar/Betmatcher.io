@@ -1,20 +1,24 @@
 <div class = "countainer ">
   <div class ="row">
     <div class = "col-xs-10 col-sm-offset-4 col-md-8 col-md-offset-3 text-center">
-
+    <h4> Users who bet to <strong><%=@game.team_not_selected%></strong></h4>
+      <p> Chose an opnent and match!</p>
+      <div class = "index-request">
       <%@requests.each do |request|%>
-      <h2> Chose an opnent and match!</h2>
-      <h1> Users who bet to <%=request.team_selected%></h1>
-        <ul class ="list-unstyled ">
+      <%if request.display == true%>
+        <ul  id= "request-card" class ="list-unstyled" >
         <div class ="user-card list-inline">
-        <li><%=request.user.email%></li>
-        <il><%=request.amount%> <i class="fa fa-database" aria-hidden="true"></i></il>
-        <li><%=link_to "BET", new_request_match_path(request)%></li>
-        <li></li>
+          <li id = "user"><%=request.user.email%></li>
+          <il id ="amount"><%=request.amount%> <i class="fa fa-database" aria-hidden="true"></i></il>
+
+           <%= simple_form_for request, url: display_request_path(request), method: :post do |f| %>
+           <%= f.submit "BET", class: "btn-match" %>
+            <% end %>
         </div>
         </ul>
-
+        <%end%>
       <%end%>
+      </div>
     </div>
   </div>
 </div>

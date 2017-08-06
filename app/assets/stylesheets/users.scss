@@ -1,3 +1,49 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-results{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.result-name{
+  color: #35A29B;
+}
+
+
+.details-user{
+  position: relative;
+  padding: 80px;
+  padding-top: 30px;
+  color:black;
+  border-bottom: 1px solid #35A29B;
+  margin-bottom: 40px;
+
+
+}
+
+#show-friends:hover{
+  cursor: pointer;
+  color: #35A29B;
+
+}
+
+// .info{
+// position: absolute;
+// left: 20px;
+// }
+
+// .country{
+//   position: absolute;
+//   left:20px;
+//   top: 95px;
+
+// }
+
+// .coins{
+//   position: absolute;
+//   right: 140px;
+//   bottom:60px;
+// }

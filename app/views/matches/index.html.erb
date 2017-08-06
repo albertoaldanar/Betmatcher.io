@@ -1,30 +1,39 @@
-
+<div class =" container_games">
 <div class = "countainer ">
   <div class ="row">
     <div class = "col-xs-10 col-sm-offset-4 col-md-8 col-md-offset-3">
+    <h2 class ="text-center"> My Matches</h2>
 
     <%@matches.each do |match|%>
     <%if match.user == current_user || match.request.user == current_user%>
+
     <div class = "text-center game-card">
       <ul class = "list-unstyled list-inline">
-      <li>
+      <li class = "football"><img src="https://image.flaticon.com/icons/svg/140/140389.svg"></li>
+      <li class =" game">
+      <%=link_to user_path(match.user) do%>
         <%=match.user.email%>
+        <%end%>
         <br>
         <%=match.request.team_not_selected%>
       </li>
       <li>VS</li>
 
-      <li>
+      <li class = "game">
+      <%=link_to user_path(match.request.user) do%>
         <%=match.request.user.email%>
+        <%end%>
         <br>
         <%=match.request.team_selected%>
       </li>
       </ul>
-      <p><%=match.request.game.date_show%></p>
-      <o><%=match.request.amount%></o>
+      <small><p class ="date"><%=match.request.game.date_show%></p></small>
+      <br>
+      <strong><p><%=match.request.amount%> Coins</p></strong>
       </div>
     <%end%>
     <%end%>
     </div>
   </div>
+</div>
 </div>

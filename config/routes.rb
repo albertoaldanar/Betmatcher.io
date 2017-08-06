@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'pages/home'
+  get 'pages_home'=> 'pages#home'
+  get 'pages_landing'=> 'pages#landing'
+
+   authenticated :user do
+    root 'pages#home', as: :authenticated_root
+  end
 
   root :to => "pages#landing"
 
@@ -33,7 +38,18 @@ end
 
   resources :matches, only: [:index, :destroy]
 
+
   devise_for :users
+  resources :users do
+    resources :rbfriends, only: [:new, :destroy]
+  end
+
+
+  resources :rbfriends, only: :index do
+    resources :betfriends, only: [:new, :destroy]
+  end
+
+  resources :betfriends, only: :index
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

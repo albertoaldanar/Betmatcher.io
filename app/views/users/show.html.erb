@@ -1,2 +1,116 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class = "container_games">
+<div class = "countainer ">
+  <div class ="row">
+    <div class = "col-xs-10 col-sm-offset-4 col-md-8 col-md-offset-3 text-center">
+
+  <div class ="details-user">
+
+    <div class ="info">
+
+    <ul class ="list-inline list-unstyled">
+      <li> <h3><%=@user.email%></h3></li>
+    <li><img src="https://image.flaticon.com/icons/svg/181/181549.svg" width="70" height="70"></li>
+    </ul>
+    </div>
+
+
+    <div class ="country">
+    <ul class ="list-inline list-unstyled">
+      <li> <h4>Mexico</h4></li>
+    <li><img src="https://image.flaticon.com/icons/svg/330/330433.svg " width="30" height="30"></li>
+    </ul>
+
+    </div>
+
+    <div class ="coins">
+     <ul class ="list-inline list-unstyled">
+      <li> <h3>175</h3></li>
+    <li><img src="https://image.flaticon.com/icons/svg/138/138292.svg" width="40" height="40"></li>
+    </ul>
+
+
+    </div>
+
+  </div>
+
+  <%count_wins = 0%>
+  <%count_tie = 0%>
+  <%count_lost = 0%>
+
+  <%@matches_tie.each do |ties|%>
+    <%if ties.user == @user || ties.request.user == @user%>
+      <%=count_tie +=1%>
+    <%end%>
+  <%end%>
+
+        <div class ="user-results">
+          <div>
+            <h2 class ="result-name">Wins</h2>
+            <h4>1</h4>
+          </div>
+
+          <div>
+            <h2 class ="result-name">Ties</h2>
+            <h4><%=count_tie%></h4>
+          </div>
+
+          <div>
+            <h2 class ="result-name">Lost</h2>
+            <h4>3</h4>
+          </div>
+        </div>
+
+        <%count = 0%>
+
+      <%@matcher_r.each do |match_r|%>
+        <%if match_r.user == @user || match_r.request.user == @user%>
+          <%count += 1%>
+        <%end%>
+      <%end%>
+
+      <p> You have <%=count%> mathces!!</p>
+
+
+      <br>
+
+
+        <%@requests.each do |request|%>
+        <ul class = "list-unstyled list-inline">
+           <%if @user == current_user%>
+             <li> <p> You have a request from <%=link_to user_path(request.send.id) do %>
+               <%=request.send.email%></p><%end%></li>
+               <li><%=link_to "Confirm", new_rbfriend_betfriend_path(request.id), class: "btn btn-success"%></li>
+               <li><%=link_to "Decline", user_rbfriend_path(request.user, request), :method => :delete, class: "btn btn-danger"%></li>
+               </ul>
+
+           <%end%>
+        <%end%>
+
+        <%if @user != current_user%>
+          <%=link_to "+ Add as Betfrined", new_user_rbfriend_path(@user)%>
+          <%else%>
+          <h4 id ="show-friends"> See my Betfriends    <img src="https://www.flaticon.com/premium-icon/icons/svg/47/47352.svg" width="25" height="25"></h4>
+          <%end%>
+      <br>
+
+
+
+
+      <%@betfriends.each do |betfriend|%>
+         <%if betfriend.friend_b == current_user && @user == current_user%>
+
+        <%=link_to user_path(betfriend.friend_a) do%>
+          <div class ="friend initiallyHidden"> <%=betfriend.friend_a.email%></div>
+        <%end%>
+
+        <%elsif betfriend.friend_a== current_user && @user == current_user%>
+        <%=link_to user_path(betfriend.friend_b) do%>
+          <div class = "friend initiallyHidden"><%=betfriend.friend_b.email%></div>
+          <%end%>
+        <%end%>
+      <%end%>
+
+    </div>
+  </div>
+</div>
+</div>

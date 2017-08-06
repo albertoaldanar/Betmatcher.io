@@ -6,3 +6,10 @@ $(document).ready(function(){
       });
 });
 
+$(document).ready(function(){
+  $("#show-friends").click(function(){
+    $(".friend").slideToggle();
+    });
+
+
+});

@@ -1,4 +1,74 @@
-<h1>Pages#landing</h1>
-<p>Find me in app/views/pages/landing.html.erb</p>
 
-<%=link_to "Login", new_user_registration_path%>
+<div class = "footer">
+
+  <div class ="felx-item">
+    <img src="https://attachment.outlook.office.net/owa/albertoaldanar@hotmail.com/service.svc/s/GetFileAttachment?id=AQMkADAwATY0MDABLWQwMAAyLWM4ZGQALTAwAi0wMAoARgAAA1f8KLAR%2BBlIo7LSGZ%2Bw8yAHACQviVWa2y5PuCWt%2BCU8H7EAAAIBDAAAAN92unImHcZNuOR8sjcx8ukAAABgiKkAAAEBEgAQADvj2ORtyahIvcDRvQuk3hs%3D&X-OWA-CANARY=bc6QUuBguUaJDtukPzXt7YBhYqfu0NQYJMHO3OpVYXHTN9XrD5_yRshRfTwNTjHVB04F54rH_jA.&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6ImVuaDlCSnJWUFU1aWpWMXFqWmpWLWZMMmJjbyJ9.eyJ2ZXIiOiJFeGNoYW5nZS5DYWxsYmFjay5WMSIsImFwcGN0eHNlbmRlciI6Ik93YURvd25sb2FkQDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImFwcGN0eCI6IntcIm1zZXhjaHByb3RcIjpcIm93YVwiLFwicHJpbWFyeXNpZFwiOlwiUy0xLTI4MjctNDA5NjAwLTM0ODk4NDM0MjFcIixcInB1aWRcIjpcIjE3NTkyMjIwOTQyODUwMjFcIixcIm9pZFwiOlwiMDAwNjQwMDAtZDAwMi1jOGRkLTAwMDAtMDAwMDAwMDAwMDAwXCIsXCJzY29wZVwiOlwiT3dhRG93bmxvYWRcIn0iLCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAODRkZjllN2YtZTlmNi00MGFmLWI0MzUtYWFhYWFhYWFhYWFhIiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnQub3V0bG9vay5vZmZpY2UubmV0QDg0ZGY5ZTdmLWU5ZjYtNDBhZi1iNDM1LWFhYWFhYWFhYWFhYSIsImV4cCI6MTUwMDcyMDg3MSwibmJmIjoxNTAwNzIwMjcxfQ.RknlT5nD7XUzF6mQWfIHz5ob-FCNRCX1smO2_as0JJIrpiOASyPR-RNKeDF_ZDgesVTatyB8t8CQszqI3MpYwnA-wjS8-pSg74W7xFwaY76NOYlzuzLra03k5vgqQmCEm7Gj5WWFGFknMpOhxYuMeKlIh4TO-2rPkSOhWTQLbsehu5-vjnEY9F-Vh7EBlSU-6tJk6nYKUVfve3PM5uRdiaBPz6NC8Z3S34M-X_Lm9tQSVkh048GXAod-Dgz8-ib0r-DV3D7TQVWzmz0angGc94AvG2SE1E4Ge2eYgPOB24Zubi9WayrWMtVfU4pIvO-A0gOeBGl0s4PMcT4_ftPXxQ&owa=outlook.live.com&isc=1&isImagePreview=True" width ="230" height ="110">
+  </div>
+
+  <div class ="felx-item login-item">
+    <%= link_to "Login", new_user_session_path, class: "login-btn" %>
+  </div>
+</div>
+
+<!-- <div class ="banner">
+  <img src="https://s-media-cache-ak0.pinimg.com/originals/bb/ac/5c/bbac5ccf8ecf5bab345f6b89ed0a65c2.jpg" height="900" style ="background-image: linear-gradient(-700deg, rgba(0,50,50,0.6) 0%, rgba(0,36,61,0.6) 20%)">
+<h1>Alberto</h1>
+
+</div> -->
+
+  <div class="banner" style="background-image:  linear-gradient(-200deg, rgba(0,50,50,0.6) 0%, rgba(0,36,50,0.6) 20%) ,url('https://photos-images.active.com/file/3/1/original/e4/24/e4247ec2-c943-4dc6-8b86-f93f8a72bb69.jpg')" >
+    <div class = "content-start">
+
+      <h1 class = "tag-line"> Bet against other people</h1>
+      <br>
+      <h4 class ="value"> Challenge your friends and random people around the world in your favorie sports events</h4>
+      <%= link_to "BET NOW", new_user_registration_path, class: "button" %>
+    </div>
+
+  </div>
+
+  <div class = "explanation">
+  <h1 class ="text-center">How it works?</h1>
+
+  <div class ="works text-center">
+    <div>
+
+    <ul class ="list-unstyled list-inline">
+     <li> <h1 class = "number">1</h1></li>
+     <li class ="item-b">
+        <h2>BET</h2>
+        <strong><p>Chose your favorite sport event and pick a team</p></strong>
+        <img src="https://image.flaticon.com/icons/svg/26/26452.svg" width ="50" height ="50">
+     </li>
+    </ul>
+
+    </div>
+
+
+    <div>
+
+    <ul class ="list-unstyled list-inline">
+     <li> <h1 class = "number">2</h1></li>
+     <li class ="item-b">
+        <h2>MATCH</h2>
+        <strong><p>Bet against the user that bet to the other team</p></strong>
+        <img src="https://image.flaticon.com/icons/svg/179/179971.svg" width ="50" height ="50">
+     </li>
+    </ul>
+
+    </div>
+
+     <div>
+
+    <ul class ="list-unstyled list-inline">
+     <li> <h1 class = "number">3</h1></li>
+     <li class ="item-b">
+        <h2>WIN</h2>
+        <strong><p>Change your Betcoins for amazing prices!</p></strong>
+        <img src="https://image.flaticon.com/icons/svg/10/10957.svg" width ="50" height ="50">
+     </li>
+    </ul>
+
+    </div>
+  </div>
+  </div>

@@ -1,0 +1,2 @@
+module BetfriendsHelper
+end

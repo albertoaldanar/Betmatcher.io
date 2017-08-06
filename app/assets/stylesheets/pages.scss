@@ -5,3 +5,111 @@
 body{
   background-color:#35A29B;
 }
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+
+.felx-item{
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.login-item{
+  padding-top: 50px;
+  position: center
+}
+
+.login-btn{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  background-color: transparent;
+  -webkit-transition: color 0.5s ;
+ -webkit-transition: background-color 0.5s;
+ border: 0.5px solid white
+}
+
+.login-btn:hover{
+  text-decoration: none;
+  color: #35A29B;
+  background-color:white;
+   -webkit-transition: color 0.5s ;
+ -webkit-transition: background-color 0.5s;
+}
+
+.banner{
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 600px;
+  background-size: cover !important;
+  box-shadow: 2px 4px 5px #888888;
+  background-color: #FFAA00;
+  z-index: 1;
+  background-position:fixed;
+}
+
+
+.content-start{
+  color: white;
+  text-align: center;
+  font-family: Century Gothic, sans-serif;
+  padding: 50px;
+
+}
+
+.tag-line{
+  font-size: 70px;
+  // border: 0.5px double #35A29B;
+  // border-radius: 5px;
+  // padding-left: 0px;
+  // border-width: 2px 5px 4px 5px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #35A29B;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+ .button:hover {
+  text-decoration: none;
+  background-color: white;
+  color:#35A29B;
+}
+
+
+.works{
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  margin: 20px;
+
+}
+
+.number{
+  font-size: 120px;
+  color: #35A29B;
+}
+
+.explanation{
+  background-color: #F5F5F5;
+  // margin-left: 20px;
+  // margin-right: 20px;
+}
